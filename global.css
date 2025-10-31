@@ -1,4 +1,8 @@
 /* Estilos mobile-first */
+body {
+  font-family: poppins, sans-serif;
+}
+
 
 header, .navbar, footer {
   background-color: #F68628;
@@ -9,8 +13,10 @@ header, .navbar, footer {
 
 header {
     position: fixed;
-    right: 0;
+    top: 0;
     left: 0;
+    right: 0;
+    z-index: 1040;      /* por encima del contenido */
 }
 
 /* Logo */
@@ -85,30 +91,6 @@ form[role="search"] .form-control {
   background: transparent;
 }
 
-@media (min-width: 1024px) {
-  header, .navbar, footer {
-    padding: 1vh 3vh;
-
-  }
-
-  /* Navegación horizontal */
-  .navbar-nav {
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 4rem;
-  }
-
-  /* Logo un poco más grande */
-  .navbar-brand img {
-    width: 140px;
-  }
-
-  /* Ajuste de la barra de búsqueda */
-  form[role="search"] .form-control {
-    width: 250px;
-  }
-}
-
 /* Contenedor de íconos */
 .social-icons {
   display: flex;
@@ -137,4 +119,36 @@ form[role="search"] .form-control {
 
 .social-icon:hover {
   transform: scale(1.1);    /* efecto sutil al pasar el mouse */
+}
+
+/* Evita que el header tape el contenido */
+main {
+  margin-top: 80px; /* ajusta según la altura real del header */
+  padding: 5vh 5vh;
+}
+
+
+@media (min-width: 1024px) {
+  header, .navbar, footer {
+    padding: 1dvh 3dvh;
+    padding: 1vh 3vh;
+
+  }
+
+  /* Navegación horizontal */
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 4rem;
+  }
+
+  /* Logo un poco más grande */
+  .navbar-brand img {
+    width: 140px;
+  }
+
+  /* Ajuste de la barra de búsqueda */
+  form[role="search"] .form-control {
+    width: 250px;
+  }
 }
