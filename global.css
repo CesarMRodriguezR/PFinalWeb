@@ -1,0 +1,140 @@
+/* Estilos mobile-first */
+
+header, .navbar, footer {
+  background-color: #F68628;
+  --bs-navbar-color: #fff;
+  --bs-navbar-active-color: #fff;
+  color: #fff;
+}
+
+header {
+    position: fixed;
+    right: 0;
+    left: 0;
+}
+
+/* Logo */
+.navbar-brand img {
+  width: 120px;
+  height: auto;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Botones de búsqueda e icono */
+.search-btn,
+.search-icon-mobile {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Ícono de búsqueda (mobile visible) */
+.search-icon {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+/* Panel deslizable del buscador móvil */
+.search-container-mobile {
+  background-color: #F68628;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+}
+.search-container-mobile.show {
+  max-height: 70px; /* se despliega */
+}
+
+/* Input dentro del buscador móvil */
+.search-container-mobile input {
+  border-radius: 0.5rem;
+}
+
+/* Formulario de búsqueda general */
+form[role="search"] .form-control {
+  border-radius: 0.5rem;
+}
+
+/* Ícono de hamburguesa blanco y sin borde */
+.custom-toggler {
+  border: none;
+  box-shadow: none;
+  background: none;
+  
+}
+
+/* Ícono del menú (mobile por defecto) */
+.custom-toggler .navbar-toggler-icon {
+  background-image: url(basil--menu-outline.svg);
+  filter: brightness(0) invert(1);
+  height: 30px;
+}
+
+.custom-toggler:focus,
+.custom-toggler:active {
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+@media (min-width: 1024px) {
+  header, .navbar, footer {
+    padding: 1vh 3vh;
+
+  }
+
+  /* Navegación horizontal */
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 4rem;
+  }
+
+  /* Logo un poco más grande */
+  .navbar-brand img {
+    width: 140px;
+  }
+
+  /* Ajuste de la barra de búsqueda */
+  form[role="search"] .form-control {
+    width: 250px;
+  }
+}
+
+/* Contenedor de íconos */
+.social-icons {
+  display: flex;
+  justify-content: center;  /* centra horizontalmente */
+  align-items: center;      /* alinea verticalmente */
+  gap: 1.5rem;              /* espacio entre íconos */
+  flex-wrap: wrap;          /* permite que bajen si el ancho no cabe */
+}
+
+/* Íconos individuales */
+.social-icon {
+  height: 30px;             /* todos con altura igual */
+  width: auto;              /* mantiene proporción */
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  color: white;
+}   
+
+.telegram-icon, .tiktok-icon {
+  height: 35px;
+}
+
+.instagram-icon {
+    height: 37px;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);    /* efecto sutil al pasar el mouse */
+}
