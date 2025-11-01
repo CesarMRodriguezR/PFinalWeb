@@ -6,7 +6,8 @@ Repositorio del proyecto final de desarrollo de aplicaciones web. El proyecto bu
 
 Cesar Marcelo Rodriguez Rodriguez\
 Isis Jolette Villanueva Zapata\
-Javier Djorkaef Saavedra Mendiola
+Javier D. Saavedra Mendiola \
+Diego Alejandro Mendoza Reyes
 
 # Estructura del folder
 
