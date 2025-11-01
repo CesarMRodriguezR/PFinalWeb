@@ -121,25 +121,11 @@ form[role="search"] .form-control {
   transform: scale(1.1);    /* efecto sutil al pasar el mouse */
 }
 
-/* Evita que el header tape el contenido */
-main {
-  margin-top: 80px; /* ajusta según la altura real del header */
-  padding: 5vh 5vh;
-}
-
-
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   header, .navbar, footer {
     padding: 1dvh 3dvh;
     padding: 1vh 3vh;
 
-  }
-
-  /* Navegación horizontal */
-  .navbar-nav {
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 4rem;
   }
 
   /* Logo un poco más grande */

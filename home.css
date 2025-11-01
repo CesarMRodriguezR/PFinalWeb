@@ -1,1 +1,22 @@
+main {
+    margin: 7rem 2rem;
+    max-width: 95vw;
+}
 
+.card {
+    width: 15rem;
+    margin: 1rem;
+}
+
+.productos{
+    margin: auto 2rem auto auto;
+
+}
+
+@media (min-width: 768px) {
+    main {
+        margin: 9rem 3rem;
+    }
+
+    
+}
