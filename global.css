@@ -79,7 +79,7 @@ form[role="search"] .form-control {
 
 /* Ícono del menú (mobile por defecto) */
 .custom-toggler .navbar-toggler-icon {
-  background-image: url(basil--menu-outline.svg);
+  background-image: url(resources/icons/basil--menu-outline.svg);
   filter: brightness(0) invert(1);
   height: 30px;
 }
