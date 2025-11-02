@@ -1,0 +1,31 @@
+.logo-emp {
+    display: flex;
+    width: 100%;
+    height: 50dvh;
+    background-color: #fff;
+    padding: 1rem;
+    object-fit: contain;
+    justify-content: center;
+}
+
+.contacto {
+    display: inline-flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-right: 2rem;
+}
+
+.contacto p {
+    margin: 0;
+}
+
+/*Ajuste de contacto Facebook por diferencia en tamaño*/
+.facebook-contacto {
+  transform: translateY(-5px);
+}
+
+span {
+    font-weight: bold;
+}
