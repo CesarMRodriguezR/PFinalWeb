@@ -188,9 +188,26 @@ input[type="search"]:focus {
   transform: scale(1.1);    /* efecto sutil al pasar el mouse */
 }
 
-article {
-  margin-top: 3rem;
+
+.card {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid gray;
+    display: flex;
+    flex: 1 0 30vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
 }
+
+.card-img-top {
+    width: 40vw;
+    height: 20vw;
+    object-fit: contain;
+    background-color: #fff;
+}
+
 
 /* Layouts para todo excepto movil*/
 @media (min-width: 768px) {
@@ -202,6 +219,7 @@ article {
   
   main {
       margin: 9rem 3rem;
+      font-size: 16px;
   }
 
 /* Esconde botones exclusivos para movil*/
@@ -262,15 +280,14 @@ article {
     justify-content: space-evenly;
   }
 
-
-  .card {
-      width: 15rem;
-      margin: 1rem;
-  }
+  
+    .card {
+        display: flex;
+        flex: 1 0 15vw;
+    }
 
   .productos{
       margin: auto 2rem auto auto;
-
   }
 
   .card-img-top {

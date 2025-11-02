@@ -1,7 +1,26 @@
+
+.productos-row {
+    overflow-x: scroll;
+    display: flex;
+    justify-items: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.emprendedores{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
 @media (min-width: 768px) {
-    main {
-        margin: 9rem 3rem;
+    .productos-row {
+        overflow: visible;
+        justify-content: space-around;
+        flex-wrap: wrap-reverse;
     }
 
-    
 }

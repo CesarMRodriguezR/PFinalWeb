@@ -3,45 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Hecho en Nuevo León</title>
-    <link href="css/home.css" rel="stylesheet">
+    <title> Alimentos | Hecho en Nuevo León</title>
     <link href="css/global.css" rel="stylesheet">
     <style> @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); </style>
     <script src="scripts/global.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class = "custom-toggler">
-                <button class="navbar-toggler-icon" id = "categoryToggle"> </button>
-            </div>
-
-            <div class="hidden-container-mobile" id="categoryContainer">
-                <ul>
-                    <li class="nav-item">
-                        <a class="nav-link" href="alimentos.html">Alimentos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Calzado</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Accesorios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Higiene</a>
-                    </li>
-                </ul>
-            </div>
-
-            <a class="navbar-brand" href="home.html">
-                <img src="resources/icons/logo-bg.svg" alt="logo de marca Hecho en Nuevo León">
-            </a>
-        
-            <button type="button" class="btn search-icon-mobile" id="searchToggle">
-                <img src="resources/icons/basil--search-outline.svg" alt="Buscar" class="search-icon">
-            </button>
+    <header class ="navbar"> 
+    <!-- Boton de hamburguesa para movil -->
+        <div class = "custom-toggler">
+            <button class="navbar-toggler-icon" id = "categoryToggle"> </button>
+        </div>
+    <!-- Categorias escondidas en movil visibles en dekstop-->
+        <nav class="hidden-container-mobile" id="categoryContainer">
+            <ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="alimentos.html">Alimentos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Calzado</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Accesorios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Higiene</a>
+                </li>
+            </ul>
         </nav>
-        <div class="hidden-container-mobile" id="searchContainer">
+
+    <!-- Logo principal -->
+        <a class="navbar-brand" href="home.html">
+            <img src="resources/icons/logo-bg.svg" alt="logo de marca Hecho en Nuevo León">
+        </a>
+    
+        <button type="button" class="search-icon-mobile" id="searchToggle">
+            <img src="resources/icons/basil--search-outline.svg" alt="Buscar" class="search-icon">
+        </button>
+        <!-- Es la seccion de busqueda que esta oculta en movil pero descubiera en Desktop-->
+         <div class="hidden-container-mobile" id="searchContainer">
             <form class="search-bar" role="search">
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
                 <button type="submit" class="search-btn">
@@ -51,8 +51,8 @@
         </div>
     </header>
 
-    <main></main>
-    <article></article>
+    <main>
+    </main>
 
     <footer>
         <div class="social-icons">
