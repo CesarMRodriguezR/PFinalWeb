@@ -188,29 +188,27 @@ input[type="search"]:focus {
   transform: scale(1.1);    /* efecto sutil al pasar el mouse */
 }
 
-
+/* Son las tarjetas que muestran productos o emprendedores */
 .card {
-    margin: 1rem;
-    padding: 1rem;
-    border: 1px solid gray;
-    display: flex;
-    flex: 1 0 30vw;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.5rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid gray;
+  display: flex; /*para poder centrar los elementos de adentro */
+  flex: 1 0 30vw; /* Declara el tamaño minimo es 30% de la pantalla, ademas que puede crecer si es necesario */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  color: inherit ; /* Elimina que los links tengan color azul*/
+  text-decoration: none; /* Elimina que los links tengan un subrayado*/
 }
 
-.card {
-  color: inherit ;
-  text-decoration: none;
-}
-
+/* Son las imagenes que estan en las tarjetas*/
 .card-img-top {
-    width: 40vw;
-    height: 20vw;
-    object-fit: contain;
-    background-color: #fff;
+  width: 40vw;  /* Tamaño dependiendo de la pantalla*/
+  height: 20vw;
+  object-fit: contain;
+  background-color: #fff;
 }
 
 
@@ -285,18 +283,16 @@ input[type="search"]:focus {
     justify-content: space-evenly;
   }
 
-  
-    .card {
-        display: flex;
-        flex: 1 0 15vw;
+  .card {
+    flex: 1 0 15vw; /* Cambia que el tamaño minimo ahora sea de 15% del tamaño de pantalla*/
     }
 
   .productos{
-      margin: auto 2rem auto auto;
+    margin: auto 2rem auto auto;
   }
 
   .card-img-top {
-    width: 100%;
+    width: 100%; /* Hace que las imagenes crezcan a su tamaño original para desktop*/
     height: 200px;
     object-fit: contain;
     background-color: #fff;

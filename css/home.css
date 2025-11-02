@@ -1,26 +1,28 @@
 
+/* Seccion encargada de los productos destacados*/
 .productos-row {
-    overflow-x: scroll;
-    display: flex;
+    overflow-x: scroll; /* Hace que se pueda hacer scroll en movil*/
+    display: flex;  /* Es un flex para poder centra más facilmente*/
     justify-items: space-around;
     align-items: center;
     gap: 1rem;
 }
 
-
+/* Seccion encargada de los emprededores*/
 .emprendedores{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Con wrap automaticamente se acomoda con la pantalla*/
     justify-content: space-around;
     align-items: center;
     gap: 1rem;
 }
 
 @media (min-width: 768px) {
+    /* Se encarga de cambiar los productos a que sean ahora wrap */
     .productos-row {
-        overflow: visible;
+        overflow: visible; /* Elimina la scrollbar*/
         justify-content: space-around;
-        flex-wrap: wrap-reverse;
+        flex-wrap: wrap;
     }
 
 }
