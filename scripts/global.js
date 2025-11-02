@@ -4,9 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoryToggle = document.getElementById('categoryToggle');
     const categoryContainer = document.getElementById('categoryContainer');
     searchToggle.addEventListener('click', () => {
-      searchContainer.classList.toggle('show');
+      if (categoryContainer.classList.contains('show')){
+        categoryContainer.classList.remove('show');
+      }
+        searchContainer.classList.toggle('show');
     });
     categoryToggle.addEventListener('click', () => {
+      if (searchContainer.classList.contains('show')){
+        searchContainer.classList.remove('show');
+      }
       categoryContainer.classList.toggle('show');
     });
   });

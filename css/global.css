@@ -12,21 +12,17 @@ header, .navbar, footer {
 }
 
 header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1040;      /* por encima del contenido */
 }
 
 .navbar{
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1040;      /* por encima del contenido */
 }
 
 footer {
@@ -45,9 +41,10 @@ footer {
 .navbar-brand img {
   width: 120px;
   height: auto;
-  padding-top: 5px;
+  padding-top: 10px;
 }
 
+/* Son las opciones del menu de categoria */
 .hidden-container-mobile ul{
   display: flex;
   flex-direction: column;
@@ -58,11 +55,11 @@ footer {
   padding: 0;
 }
 
+/* */
 .hidden-container-mobile ul li a {
   color: #fff;
   text-decoration: none;
 }
-
 
 /* Botones de búsqueda e icono */
 .search-btn,
@@ -102,11 +99,20 @@ footer {
 /* Input dentro del buscador móvil */
 .hidden-container-mobile input {
   border-radius: 0.5rem;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
 }
 
 /* Formulario de búsqueda general */
 form[role="search"] .form-control {
   border-radius: 0.5rem;
+}
+
+input[type="search"]:focus {
+  border-color: #0077ff;
 }
 
 /* Ícono de hamburguesa blanco y sin borde */
@@ -163,31 +169,6 @@ form[role="search"] .form-control {
   transform: scale(1.1);    /* efecto sutil al pasar el mouse */
 }
 
-#searchContainer .search-bar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-#searchContainer .search-bar input[type="search"] {
-  flex: 1;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
-  outline: none;
-}
-
-#searchContainer .search-bar input[type="search"]:focus {
-  border-color: #0077ff;
-  box-shadow: 0 0 4px rgba(0, 119, 255, 0.3);
-}
-
-#searchContainer .search-bar button.search-btn {
-  background: none;
-  border: none;
-  padding: 0;
-}
 
 @media (min-width: 768px) {
   header, .navbar, footer {
