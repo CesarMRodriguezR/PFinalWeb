@@ -80,7 +80,7 @@ nav ul li a {
 
 .search-bar {
   display: flex;
-  width: 100%;
+  width: 90%;
   justify-content: center;
   align-items: center;
 }
