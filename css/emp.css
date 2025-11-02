@@ -1,11 +1,17 @@
-.logo-emp {
+#logo-historia {
     display: flex;
-    width: 100%;
-    height: 50dvh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-emp {
+    width: 60vw;
+    height: auto;
+    margin-right: 10px;
     background-color: #fff;
     padding: 1rem;
     object-fit: contain;
-    justify-content: center;
 }
 
 .contacto {
@@ -28,4 +34,14 @@
 
 span {
     font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    #logo-historia {
+        display: flex;
+        flex-direction: row;
+    }
+    .logo-emp {
+        width: 30vw;
+    }
 }
