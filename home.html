@@ -10,37 +10,35 @@
     <script src="scripts/global.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class = "custom-toggler">
-                <button class="navbar-toggler-icon" id = "categoryToggle"> </button>
-            </div>
+    <header class ="navbar">
+        <div class = "custom-toggler">
+            <button class="navbar-toggler-icon" id = "categoryToggle"> </button>
+        </div>
 
-            <div class="hidden-container-mobile" id="categoryContainer">
-                <ul>
-                    <li class="nav-item">
-                        <a class="nav-link" href="alimentos.html">Alimentos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Calzado</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Accesorios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Higiene</a>
-                    </li>
-                </ul>
-            </div>
-
-            <a class="navbar-brand" href="home.html">
-                <img src="resources/icons/logo-bg.svg" alt="logo de marca Hecho en Nuevo León">
-            </a>
-        
-            <button type="button" class="btn search-icon-mobile" id="searchToggle">
-                <img src="resources/icons/basil--search-outline.svg" alt="Buscar" class="search-icon">
-            </button>
+        <nav class="hidden-container-mobile" id="categoryContainer">
+            <ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="alimentos.html">Alimentos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Calzado</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Accesorios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Higiene</a>
+                </li>
+            </ul>
         </nav>
+
+        <a class="navbar-brand" href="home.html">
+            <img src="resources/icons/logo-bg.svg" alt="logo de marca Hecho en Nuevo León">
+        </a>
+    
+        <button type="button" class="search-icon-mobile" id="searchToggle">
+            <img src="resources/icons/basil--search-outline.svg" alt="Buscar" class="search-icon">
+        </button>
         <div class="hidden-container-mobile" id="searchContainer">
             <form class="search-bar" role="search">
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
