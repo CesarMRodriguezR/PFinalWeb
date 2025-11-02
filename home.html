@@ -4,71 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Hecho en Nuevo León</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/home.css" rel="stylesheet">
     <link href="css/global.css" rel="stylesheet">
     <style> @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); </style>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts/global.js" defer></script>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
+        <nav class="navbar">
+            <div class = "custom-toggler">
+                <button class="navbar-toggler-icon" id = "categoryToggle"> </button>
+            </div>
 
-                <!-- Menú de hamburguesa -->
-                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <div class="hidden-container-mobile" id="categoryContainer">
+                <ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="alimentos.html">Alimentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Calzado</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Accesorios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Higiene</a>
+                    </li>
+                </ul>
+            </div>
 
-                <!-- Logo-->
-                <a class="navbar-brand mx-auto mx-lg-0" href="home.html">
-                    <img src="resources/icons/logo-bg.svg" alt="logo de marca Hecho en Nuevo León">
-                </a>
-
-                <!-- ÍCONO SOLO PARA MÓVIL -->
-                 <button type="button" class="btn search-icon-mobile d-inline-flex d-lg-none ms-2" id="searchToggle">
+            <a class="navbar-brand" href="home.html">
+                <img src="resources/icons/logo-bg.svg" alt="logo de marca Hecho en Nuevo León">
+            </a>
+        
+            <button type="button" class="btn search-icon-mobile" id="searchToggle">
+                <img src="resources/icons/basil--search-outline.svg" alt="Buscar" class="search-icon">
+            </button>
+        </nav>
+        <div class="hidden-container-mobile" id="searchContainer">
+            <form class="search-bar" role="search">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+                <button type="submit" class="search-btn">
                     <img src="resources/icons/basil--search-outline.svg" alt="Buscar" class="search-icon">
                 </button>
-
-                <!-- Búsqueda EN DESKTOP (oculta en móvil) -->
-                 <form class="d-none d-lg-flex align-items-center ms-lg-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
-                    <button type="submit" class="btn search-btn p-0">
-                        <img src="resources/icons/basil--search-outline.svg" alt="Buscar" class="search-icon">
-                    </button>
-                </form>
-
-                <!-- Menú -->
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="alimentos.html">Alimentos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Calzado</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Accesorios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Higiene</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Formulario de búsqueda móvil -->
-             <div class="search-container-mobile d-lg-none" id="searchContainer">
-                <form class="d-flex p-2" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button type="submit" class="btn search-btn p-0">
-                        <img src="resources/icons/basil--search-outline.svg" alt="Buscar" class="search-icon">
-                    </button>
-                </form>
-            </div>
-
-        </nav>
+            </form>
+        </div>
     </header>
     
     <!-- Sección de productos destacados -->

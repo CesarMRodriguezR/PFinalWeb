@@ -11,6 +11,10 @@ header, .navbar, footer {
   color: #fff;
 }
 
+header {
+  position: relative;
+}
+
 .navbar{
   display: flex;
   justify-content: space-around;
@@ -44,12 +48,7 @@ footer {
   padding-top: 5px;
 }
 
-.navbar-nav{
-  display: none;
-  overflow: hidden;
-}
-
-.navbar-nav ul{
+.hidden-container-mobile ul{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,6 +57,12 @@ footer {
   margin: 0;
   padding: 0;
 }
+
+.hidden-container-mobile ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
 
 /* Botones de búsqueda e icono */
 .search-btn,
@@ -75,19 +80,27 @@ footer {
   filter: brightness(0) invert(1);
 }
 
-/* Panel deslizable del buscador móvil */
-.search-container-mobile {
+/* Panel deslizable del encabezado móvil */
+.hidden-container-mobile {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0  4px  rgba(0, 0, 0, 0.1);
   background-color: #F68628;
-  overflow: hidden;
-  max-height: 0;
   transition: max-height 0.3s ease-out;
 }
-.search-container-mobile.show {
-  max-height: 70px; /* se despliega */
+.hidden-container-mobile.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Input dentro del buscador móvil */
-.search-container-mobile input {
+.hidden-container-mobile input {
   border-radius: 0.5rem;
 }
 
@@ -107,8 +120,8 @@ form[role="search"] .form-control {
 /* Ícono del menú (mobile por defecto) */
 .custom-toggler .navbar-toggler-icon {
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: 32px;
+  height: 40px;
   mask: url(../resources/icons/basil--menu-outline.svg) no-repeat center / contain ;
   background-color: white;
 }
@@ -150,6 +163,32 @@ form[role="search"] .form-control {
   transform: scale(1.1);    /* efecto sutil al pasar el mouse */
 }
 
+#searchContainer .search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#searchContainer .search-bar input[type="search"] {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+#searchContainer .search-bar input[type="search"]:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 4px rgba(0, 119, 255, 0.3);
+}
+
+#searchContainer .search-bar button.search-btn {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
 @media (min-width: 768px) {
   header, .navbar, footer {
     padding: 1dvh 3dvh;
@@ -162,8 +201,4 @@ form[role="search"] .form-control {
     width: 140px;
   }
 
-  /* Ajuste de la barra de búsqueda */
-  form[role="search"] .form-control {
-    width: 250px;
-  }
 }
