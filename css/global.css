@@ -26,6 +26,11 @@ main {
   max-width: 95dvw;
   max-width: 95vw;
 }
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 footer {
   text-align: center;
@@ -43,22 +48,41 @@ footer {
 .navbar-brand img {
   width: 120px;
   height: auto;
+  padding-top: 10px;
 }
 
-.navbar-nav {
+/* Son las opciones del menu de categoria */
+nav ul{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* */
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Botones de búsqueda e icono */
 .search-btn,
 .search-icon-mobile {
   background: none;
+  padding: 0px 10px 0px 10px;
   border: none;
   padding: 0;
   cursor: pointer;
+}
+
+.search-bar {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Ícono de búsqueda (mobile visible) */
@@ -68,25 +92,42 @@ footer {
   filter: brightness(0) invert(1);
 }
 
-/* Panel deslizable del buscador móvil */
-.search-container-mobile {
+/* Panel deslizable del encabezado móvil */
+.hidden-container-mobile {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0  4px  rgba(0, 0, 0, 0.1);
   background-color: #F68628;
-  overflow: hidden;
-  max-height: 0;
   transition: max-height 0.3s ease-out;
 }
-.search-container-mobile.show {
-  max-height: 70px; /* se despliega */
+.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Input dentro del buscador móvil */
-.search-container-mobile input {
+.hidden-container-mobile input {
   border-radius: 0.5rem;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
 }
 
 /* Formulario de búsqueda general */
 form[role="search"] .form-control {
   border-radius: 0.5rem;
+}
+
+input[type="search"]:focus {
+  border-color: #0077ff;
 }
 
 /* Ícono de hamburguesa blanco y sin borde */
@@ -99,9 +140,11 @@ form[role="search"] .form-control {
 
 /* Ícono del menú (mobile por defecto) */
 .custom-toggler .navbar-toggler-icon {
-  background-image: url(../resources/icons/basil--menu-outline.svg);
-  filter: brightness(0) invert(1);
-  height: 30px;
+  cursor: pointer;
+  width: 32px;
+  height: 40px;
+  mask: url(../resources/icons/basil--menu-outline.svg) no-repeat center / contain ;
+  background-color: white;
 }
 
 .custom-toggler:focus,
@@ -151,38 +194,82 @@ article {
     padding: 1vh 3vh;
 
   }
+  
+  main {
+      margin: 9rem 3rem;
+  }
 
-  /* Logo un poco más grande */
+  .custom-toggler, .search-icon-mobile {
+    display: none;
+  }
+
+  .hidden-container-mobile{
+    all: revert ;
+    display: block;
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-columns: 187px 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #categoryContainer {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  nav ul {
+    width: 100%;
+    flex-direction: row;
+    align-items: stretch ;
+  }
+
+  nav li {
+    width: 100%;
+  }
+
+  .navbar-brand {
+    padding: 10px;
+    grid-column-start: 1;
+  }
+  
   .navbar-brand img {
     width: 140px;
   }
 
-  /* Ajuste de la barra de búsqueda */
-  form[role="search"] .form-control {
-    width: 250px;
+  #searchContainer {
+    padding: 10px;
+    grid-column-start: 2;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: stretch;
   }
-}
+  .card {
+      width: 15rem;
+      margin: 1rem;
+  }
 
-.card {
-    width: 15rem;
-    margin: 1rem;
-}
+  .productos{
+      margin: auto 2rem auto auto;
 
-.productos{
-    margin: auto 2rem auto auto;
+  }
 
-}
+  .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background-color: #fff;
+    padding: 1rem;
+  }
 
-.card-img-top {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  background-color: #fff;
-  padding: 1rem;
-}
-
-@media (min-width: 768px) {
-  main {
-      margin: 9rem 3rem;
+  input {
+    flex:1 ;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
   }
 }
