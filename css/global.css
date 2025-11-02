@@ -13,6 +13,7 @@ header, .navbar, footer {
   color: #fff;
 }
 
+/* Acomoda el header al inicio de la pagina */
 header {
   position: fixed;
   top: 0;
@@ -26,6 +27,7 @@ main {
   max-width: 95dvw;
   max-width: 95vw;
 }
+/* Acomoda el header en un flex para acomodar mejor las cosas*/
 .navbar{
   display: flex;
   justify-content: space-around;
@@ -44,7 +46,7 @@ footer {
   margin-bottom: 0;
 }
 
-/* Logo */
+/* Logo Nuevo Leon*/
 .navbar-brand img {
   width: 120px;
   height: auto;
@@ -62,7 +64,7 @@ nav ul{
   padding: 0;
 }
 
-/* */
+/* Hace que los elementos eliminen los * y el subrayado*/
 nav ul li a {
   color: #fff;
   text-decoration: none;
@@ -78,9 +80,10 @@ nav ul li a {
   cursor: pointer;
 }
 
+/* Se encarga que la barra busqueda se estire en Movil y Dektop*/
 .search-bar {
   display: flex;
-  width: 90%;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -105,6 +108,7 @@ nav ul li a {
   background-color: #F68628;
   transition: max-height 0.3s ease-out;
 }
+/* Estado que muestra cuando en movil se muestra ya sea categoria o barra de busqueda*/
 .show {
   display: flex;
   justify-content: center;
@@ -125,7 +129,7 @@ nav ul li a {
 form[role="search"] .form-control {
   border-radius: 0.5rem;
 }
-
+/* Hace que cuando selecciones la barra se ponga azul*/
 input[type="search"]:focus {
   border-color: #0077ff;
 }
@@ -188,6 +192,7 @@ article {
   margin-top: 3rem;
 }
 
+/* Layouts para todo excepto movil*/
 @media (min-width: 768px) {
   header, .navbar, footer {
     padding: 1dvh 3dvh;
@@ -199,56 +204,65 @@ article {
       margin: 9rem 3rem;
   }
 
+/* Esconde botones exclusivos para movil*/
   .custom-toggler, .search-icon-mobile {
     display: none;
   }
 
+/* Muestra las secciones escondidas de movil para Desktop*/
   .hidden-container-mobile{
-    all: revert ;
+    all: revert ; /* Sobreescribe y resetea las caracteristicas */
     display: block;
   }
 
+/* Hace que el header sea un grid para reacomodar los elementos*/
   .navbar {
     display: grid;
-    grid-template-columns: 187px 1fr 1fr;
+    grid-template-columns: 187px 1fr 0.5fr; /* 187 es el minimo del logo */
     justify-content: space-between;
     align-items: center;
   }
-  #categoryContainer {
-    grid-column-start: 3;
-    grid-row-start: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-  }
 
-  nav ul {
-    width: 100%;
-    flex-direction: row;
-    align-items: stretch ;
-  }
-
-  nav li {
-    width: 100%;
-  }
-
+  /* Hace que el logo sea primero */
   .navbar-brand {
     padding: 10px;
     grid-column-start: 1;
+    grid-row-start: 1;
   }
   
+  /* Agranda el logo*/
   .navbar-brand img {
     width: 140px;
   }
 
+  /* Coloca la barra de busqueda despues del logo*/
   #searchContainer {
     padding: 10px;
     grid-column-start: 2;
+    grid-row-start: 1;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: start;
-    align-items: stretch;
   }
+
+  /* Hace que la barra de busqueda pueda extenderse al tamaño de la pantalla */
+  input {
+    flex:1 ;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+  }
+
+  /* Hace que las categorias sea al final*/
+  #categoryContainer {
+    grid-column-start: 3;
+    grid-row-start: 1; /* Si no se pone esto se pone arriba de los demas elementos */
+  }
+  /* Hace que las categorias sean ahora horizontales y mas grandes*/
+  nav ul {
+    font-size: 18px;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+
   .card {
       width: 15rem;
       margin: 1rem;
@@ -265,11 +279,5 @@ article {
     object-fit: contain;
     background-color: #fff;
     padding: 1rem;
-  }
-
-  input {
-    flex:1 ;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
   }
 }

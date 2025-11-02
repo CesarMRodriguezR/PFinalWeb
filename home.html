@@ -10,11 +10,12 @@
     <script src="scripts/global.js" defer></script>
 </head>
 <body>
-    <header class ="navbar">
+    <header class ="navbar"> 
+    <!-- Boton de hamburguesa para movil -->
         <div class = "custom-toggler">
             <button class="navbar-toggler-icon" id = "categoryToggle"> </button>
         </div>
-
+    <!-- Categorias escondidas en movil visibles en dekstop-->
         <nav class="hidden-container-mobile" id="categoryContainer">
             <ul>
                 <li class="nav-item">
@@ -32,6 +33,7 @@
             </ul>
         </nav>
 
+    <!-- Logo principal -->
         <a class="navbar-brand" href="home.html">
             <img src="resources/icons/logo-bg.svg" alt="logo de marca Hecho en Nuevo León">
         </a>
@@ -39,7 +41,8 @@
         <button type="button" class="search-icon-mobile" id="searchToggle">
             <img src="resources/icons/basil--search-outline.svg" alt="Buscar" class="search-icon">
         </button>
-        <div class="hidden-container-mobile" id="searchContainer">
+        <!-- Es la seccion de busqueda que esta oculta en movil pero descubiera en Desktop-->
+         <div class="hidden-container-mobile" id="searchContainer">
             <form class="search-bar" role="search">
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
                 <button type="submit" class="search-btn">
