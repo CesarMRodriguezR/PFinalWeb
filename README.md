@@ -16,7 +16,7 @@ Este directorio sigue la estructura basica de una página html. Los folders y pa
 ├─ css/  \
 ├─ resources/ \
 │ ├─ icons/ \
-│ └─ images/ (no han sido agregadas) \
+│ └─ images/ \
 ├─ scripts/  \
 ├─ home.html (pagina principal) \
 ├─ empA.html (**diferencia entre A y B ?**) \
