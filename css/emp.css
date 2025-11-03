@@ -32,10 +32,6 @@
   transform: translateY(-5px);
 }
 
-span {
-    font-weight: bold;
-}
-
 @media (min-width: 768px) {
     #logo-historia {
         display: flex;
