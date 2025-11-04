@@ -9,7 +9,7 @@
 }
 
 #logo-historia p{
-    text-align: justify;
+    text-align: justify; /* Justificar el texto de la historia*/
 }
 
 /*Estilos para el logo.*/
