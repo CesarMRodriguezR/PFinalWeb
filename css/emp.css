@@ -30,6 +30,7 @@
     gap: 0.5rem; 
     margin-top: 1rem;
     margin-right: 2rem; /*Coloca separación entre contactos*/
+    color: #F68628;
 }
 
 /*Se eliminan los márgenes del texto de contacto para que se pueda alinear correctamente con el logo.*/
