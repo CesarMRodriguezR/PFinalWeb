@@ -5,6 +5,10 @@
     align-items: center;
 }
 
+#logo-historia p{
+    text-align: justify;
+}
+
 .logo-emp {
     width: 60vw;
     height: auto;

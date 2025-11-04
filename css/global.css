@@ -21,6 +21,9 @@ header {
   left: 0;
   right: 0;
   z-index: 1040;      /* por encima del contenido */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 main {
@@ -31,12 +34,6 @@ main {
 
 section {
   margin-bottom: 2rem;
-}
-/* Acomoda el header en un flex para acomodar mejor las cosas*/
-.navbar{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
 footer {
@@ -137,7 +134,6 @@ p {
   padding: 10px;
   box-shadow: 0  4px  rgba(0, 0, 0, 0.1);
   background-color: #F68628;
-  transition: max-height 0.3s ease-out;
 }
 /* Estado que muestra cuando en movil se muestra ya sea categoria o barra de busqueda*/
 .show {
@@ -165,28 +161,13 @@ input[type="search"]:focus {
   border-color: #0077ff;
 }
 
-/* Ícono de hamburguesa blanco y sin borde */
-.custom-toggler {
-  border: none;
-  box-shadow: none;
-  background: none;
-  
-}
-
 /* Ícono del menú (mobile por defecto) */
 .custom-toggler .navbar-toggler-icon {
   cursor: pointer;
-  width: 32px;
+  width: 40px;
   height: 40px;
   mask: url(../resources/icons/basil--menu-outline.svg) no-repeat center / contain ;
   background-color: white;
-}
-
-.custom-toggler:focus,
-.custom-toggler:active {
-  outline: none;
-  box-shadow: none;
-  background: transparent;
 }
 
 /* Contenedor de íconos */
@@ -257,7 +238,6 @@ input[type="search"]:focus {
   background-color: #fff;
 }
 
-
 .galery-display{
     display: flex;
     flex-wrap: wrap; /* Con wrap automaticamente se acomoda con la pantalla*/
@@ -294,7 +274,7 @@ input[type="search"]:focus {
 /* Muestra las secciones escondidas de movil para Desktop*/
   .hidden-container-mobile{
     all: revert ; /* Sobreescribe y resetea las caracteristicas */
-    display: block;
+    display: block; /* Muestra la barra de busqueda y categorias*/
   }
 
 /* Hace que el header sea un grid para reacomodar los elementos*/
@@ -321,7 +301,7 @@ input[type="search"]:focus {
   #searchContainer {
     padding: 0px 0.3vw;
     grid-column-start: 2;
-    grid-row-start: 1;
+    grid-row-start: 1; /* Hace que las opciones este centradas en la primera*/
     display: flex;
   }
 
@@ -335,6 +315,7 @@ input[type="search"]:focus {
   /* Hace que las categorias sea al final*/
   #categoryContainer {
     grid-column-start: 3;
+    grid-row-start: 1;  /* Hace que las opciones este centradas en la primera*/
   }
 
   /* Hace que las categorias sean ahora horizontales y mas grandes*/
@@ -354,10 +335,9 @@ input[type="search"]:focus {
 
   .card-img-top {
     width: 90%; /* Hace que las imagenes crezcan a su tamaño original para desktop*/
-
     padding: 1rem;
   }
-    /* Se encarga de cambiar los productos a que sean ahora wrap */
+    /* Se encarga de cambiar los productos a que sean ahora wrap para Desktop*/
   .productos-scroll {
     overflow: visible; /* Elimina la scrollbar*/
     justify-content: space-around;
