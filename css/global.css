@@ -46,6 +46,10 @@ footer {
   margin: 0;
 }
 
+footer img {
+  display: block;
+}
+
 .copyright {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -271,14 +275,11 @@ input[type="search"]:focus {
     gap: 0.5rem;
 }
 
-
-
 /* Layouts para todo excepto movil*/
 @media (min-width: 768px) {
   header, .navbar, footer {
     padding: 1dvh 3dvh;
     padding: 1vh 3vh;
-
   }
   
   main {
