@@ -277,9 +277,8 @@ input[type="search"]:focus {
 
 /* Layouts para todo excepto movil*/
 @media (min-width: 768px) {
-  header, .navbar, footer {
-    padding: 1dvh 3dvh;
-    padding: 1vh 3vh;
+  footer {
+    padding: 3vh;
   }
   
   main {
@@ -300,9 +299,9 @@ input[type="search"]:focus {
 
 /* Hace que el header sea un grid para reacomodar los elementos*/
   .navbar {
+    padding: 0px 3.5rem;
     display: grid;
-    grid-template-columns: 187px 1fr 0.5fr; /* 187 es el minimo del logo */
-    justify-content: space-between;
+    grid-template-columns: 187px 0.9fr 0.5fr; /* 187 es el minimo del logo */
     align-items: center;
   }
 
@@ -320,7 +319,7 @@ input[type="search"]:focus {
 
   /* Coloca la barra de busqueda despues del logo*/
   #searchContainer {
-    padding: 10px;
+    padding: 0px 0.3vw;
     grid-column-start: 2;
     grid-row-start: 1;
     display: flex;
@@ -337,6 +336,7 @@ input[type="search"]:focus {
   #categoryContainer {
     grid-column-start: 3;
   }
+
   /* Hace que las categorias sean ahora horizontales y mas grandes*/
   nav ul {
     font-size: 18px;
