@@ -216,7 +216,7 @@ input[type="search"]:focus {
   display: flex; /*para poder centrar los elementos de adentro */
   flex: 1 0 30vw; /* Declara el tamaño minimo es 30% de la pantalla, ademas que puede crecer si es necesario */
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   text-align: center;
   align-items: center;
   border-radius: 0.5rem;
@@ -234,7 +234,7 @@ input[type="search"]:focus {
 
 .card:not(.no-action):hover{
   box-shadow: 0 4px 8px 0 black;
-  transform: scale(0.9, 0.9);
+  transform: scale(1.1, 1.1);
 }
 
 /* Son las imagenes que estan en las tarjetas*/
@@ -250,7 +250,7 @@ input[type="search"]:focus {
     display: flex;
     flex-wrap: wrap; /* Con wrap automaticamente se acomoda con la pantalla*/
     justify-content: space-around;
-    align-items: center;
+    align-items: start;
     gap: 0.5rem;
 }
 
