@@ -1,30 +1,36 @@
+/*Estilos base con enfoque mobile-first*/
+
+/*Estilos para la sección con el logo del emprendedor y su historia.*/
 #logo-historia {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*Acomoda el logo arriba y el texto abajo.*/
     justify-content: center;
     align-items: center;
 }
 
+/*Estilos para el logo.*/
 .logo-emp {
+    width: 60dvw;
     width: 60vw;
     height: auto;
-    margin-right: 10px;
+    margin-right: 10px; /*Permite separación entre el logo y el texto al pasar a estar a la izquierda.*/
     background-color: #fff;
-    padding: 1rem;
-    object-fit: contain;
+    padding: 1rem; 
 }
 
+/*Estilos para cada contacto de un emprendedor*/
 .contacto {
-    display: inline-flex;
-    justify-content: left;
-    align-items: center;
-    gap: 0.5rem;
+    display: inline-flex; /*Permite colocar varios contactos en una sola línea*/
+    justify-content: left; /*Acomoda el logo de contacto y texto hacia la izquierda.*/
+    align-items: center; /*Centra el logo y texto verticalmente*/
+    gap: 0.5rem; 
     margin-top: 1rem;
-    margin-right: 2rem;
+    margin-right: 2rem; /*Coloca separación entre contactos*/
 }
 
+/*Se eliminan los márgenes del texto de contacto para que se pueda alinear correctamente con el logo.*/
 .contacto p {
-    margin: 0;
+    margin: 0; 
 }
 
 /*Ajuste de contacto Facebook por diferencia en tamaño*/
@@ -32,12 +38,14 @@
   transform: translateY(-5px);
 }
 
+/*Para tablets y dispositivos de mayor width de pantalla:*/
 @media (min-width: 768px) {
     #logo-historia {
         display: flex;
-        flex-direction: row;
+        flex-direction: row; /*Cambia a que la imagen se muestra a la izquierda y el texto a la derecha*/
     }
     .logo-emp {
+        width: 30dvw; /*Ajuste del tamaño de la imagen*/
         width: 30vw;
     }
 }
