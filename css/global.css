@@ -47,6 +47,7 @@ footer img {
   display: block;
 }
 
+/*Mensaje de copyright en el footer*/
 .copyright {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -77,6 +78,7 @@ nav ul li a {
   text-decoration: none;
 }
 
+/*Estilización para tamaños de texto escalables y tipografías*/
 h1 {
   font-weight: bold;
   font-size: clamp(1.5rem, 2dvw + 0.5rem, 2.5rem);
@@ -116,7 +118,7 @@ p {
   align-items: center;
 }
 
-/* Ícono de búsqueda (mobile visible) */
+/* Icono de busqueda (mobile visible) */
 .search-icon {
   width: 30px;
   height: 30px;
@@ -135,6 +137,7 @@ p {
   box-shadow: 0  4px  rgba(0, 0, 0, 0.1);
   background-color: #F68628;
 }
+
 /* Estado que muestra cuando en movil se muestra ya sea categoria o barra de busqueda*/
 .show {
   display: flex;
@@ -142,6 +145,7 @@ p {
   align-items: center;
 }
 
+/*Interactividad para categorias de busqueda en header*/
 .nav-item:hover {
   border-bottom: solid white 2px;
 }
@@ -187,7 +191,7 @@ input[type="search"]:focus {
   flex-wrap: wrap;          /* permite que bajen si el ancho no cabe */
 }
 
-/* Íconos individuales */
+/* Iconos de redes sociales individuales */
 .social-icon {
   height: 30px;             /* todos con altura igual */
   width: auto;              /* mantiene proporción */
@@ -196,27 +200,31 @@ input[type="search"]:focus {
   color: white;
 }   
 
+/*Estilizacion para telegram y tiktok por diferencias de tamaño.*/
 .telegram-icon, .tiktok-icon {
   height: 35px;
 }
 
+/*Estilizacion para instagram por diferencias de tamaño.*/
 .instagram-icon {
     height: 37px;
 }
 
+/*Efecto sutil para iconos de redes al pasar el mouse*/
 .social-icon:hover {
-  transform: scale(1.1);    /* efecto sutil al pasar el mouse */
+  transform: scale(1.1);
 }
 
-/* Son las tarjetas que muestran productos o emprendedores */
+/* Son las tarjetas que muestran productos, emprendedores o subcategorias.*/
 .card {
   margin: 1rem;
   padding: 1rem;
   border: 1px solid gray;
   border-radius: 0.5rem;
-  display: flex; /*para poder centrar los elementos de adentro */
-  min-height: 20rem; /*Hace que al menos todas las tarjetas tengan la misma algura*/
-  flex: 1 0 30vw; /* Declara el tamaño minimo es 30% de la pantalla, ademas que puede crecer si es necesario */
+  display: flex; /*Para poder centrar los elementos de adentro */
+  min-height: 20rem; /*Hace que al menos todas las tarjetas tengan la misma altura*/
+  flex: 1 0 30dvw; /* Declara el tamaño minimo es 30% de la pantalla, ademas que puede crecer si es necesario */
+  flex: 1 0 30dvw;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
@@ -228,6 +236,7 @@ input[type="search"]:focus {
   transition: transform 0.5s, box-shadow;
 }
 
+/*Interactividad para las tarjetas, salvo aquellas con la clase .no-action*/
 .card:not(.no-action):active {
   border-color: #F68628;
   border-width: 2px;
@@ -247,16 +256,13 @@ input[type="search"]:focus {
   background-color: #fff;
 }
 
+/*Display en forma de galeria para las tarjetas*/
 .galery-display{
     display: flex;
     flex-wrap: wrap; /* Con wrap automaticamente se acomoda con la pantalla*/
     justify-content: space-around;
     align-items: start;
     gap: 0.5rem;
-}
-
-#seccion-emprendedores .card, #subcategorias .card{
-  min-height: 5rem; /*Hace que al menos todas las tarjetas tengan la misma algura*/
 }
 
 /* Seccion encargada de los productos destacados*/
@@ -268,7 +274,7 @@ input[type="search"]:focus {
     gap: 0.5rem;
 }
 
-/* Layouts para todo excepto movil*/
+/*Estilos para todo excepto movil*/
 @media (min-width: 768px) {
   footer {
     padding: 3vh;
@@ -287,7 +293,7 @@ input[type="search"]:focus {
 /* Muestra las secciones escondidas de movil para Desktop*/
   .hidden-container-mobile{
     all: revert ; /* Sobreescribe y resetea las caracteristicas */
-    display: block; /* Muestra la barra de busqueda y categorias*/
+    display: block; /* Muestra la barra de busqueda y categorias */
   }
 
 /* Hace que el header sea un grid para reacomodar los elementos*/
@@ -325,7 +331,7 @@ input[type="search"]:focus {
     border-radius: 0.5rem;
   }
 
-  /* Hace que las categorias sea al final*/
+  /* Hace que las categorias sean al final*/
   #categoryContainer {
     grid-column-start: 3;
     grid-row-start: 1;  /* Hace que las opciones este centradas en la primera*/
@@ -357,14 +363,11 @@ input[type="search"]:focus {
     margin: 0 auto 1rem auto;
     background-color: #fff;
   }
-    /* Se encarga de cambiar los productos a que sean ahora wrap para Desktop*/
+    /* Se encarga de cambiar las tarjetas que usan sidescroll en movil sean ahora wrap para Desktop*/
   .productos-scroll {
     overflow: visible; /* Elimina la scrollbar*/
     justify-content: space-around;
     flex-wrap: wrap;
-  }
-  #seccion-emprendedores .card, #subcategorias .card{
-    min-height: 5rem; /*Hace que al menos todas las tarjetas tengan la misma algura*/
   }
 }
 
