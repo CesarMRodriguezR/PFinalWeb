@@ -255,6 +255,11 @@ input[type="search"]:focus {
     gap: 0.5rem;
 }
 
+.galery-display .card, #subcategorias .productos-scroll .card{
+  min-height: 5rem; /*Hace que al menos todas las tarjetas tengan la misma algura*/
+}
+
+
 /* Seccion encargada de los productos destacados*/
 .productos-scroll {
     overflow-x: scroll; /* Hace que se pueda hacer scroll en movil*/
