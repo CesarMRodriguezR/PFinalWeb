@@ -255,10 +255,9 @@ input[type="search"]:focus {
     gap: 0.5rem;
 }
 
-.galery-display .card, #subcategorias .productos-scroll .card{
+.galery-display .card, #subcategorias .card{
   min-height: 5rem; /*Hace que al menos todas las tarjetas tengan la misma algura*/
 }
-
 
 /* Seccion encargada de los productos destacados*/
 .productos-scroll {
@@ -364,5 +363,8 @@ input[type="search"]:focus {
     justify-content: space-around;
     flex-wrap: wrap;
   }
+  .galery-display .card, #subcategorias .productos-scroll .card{
+    min-height: 16rem; /*Hace que al menos todas las tarjetas tengan la misma algura*/
+}
 }
 
