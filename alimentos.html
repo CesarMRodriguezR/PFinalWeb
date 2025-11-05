@@ -10,38 +10,33 @@
 </head>
 <body>
     <header class ="navbar"> 
-    <!-- Boton de hamburguesa para movil -->
-        <div class = "custom-toggler">
-            <button class="navbar-toggler-icon" id = "categoryToggle"> </button>
+        <!-- Boton de hamburguesa para movil -->
+        <div class="custom-toggler">
+            <button class="navbar-toggler-icon" id="categoryToggle"></button>
         </div>
-    <!-- Categorias escondidas en movil visibles en dekstop-->
+
+        <!-- Categorias escondidas en movil visibles en desktop -->
         <nav class="hidden-container-mobile" id="categoryContainer">
             <ul>
-                <li class="nav-item">
-                    <a class="nav-link" href="alimentos.html">Alimentos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Calzado</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Accesorios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="higiene.html">Higiene</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="alimentos.html">Alimentos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Calzado</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Accesorios</a></li>
+                <li class="nav-item"><a class="nav-link" href="higiene.html">Higiene</a></li>
             </ul>
         </nav>
 
-    <!-- Logo principal -->
+        <!-- Logo principal -->
         <a class="navbar-brand" href="home.html">
             <img src="resources/icons/logo-bg.svg" alt="logo de marca Hecho en Nuevo León">
         </a>
     
+        <!-- Icono de búsqueda móvil -->
         <button type="button" class="search-icon-mobile" id="searchToggle">
             <img src="resources/icons/basil--search-outline.svg" alt="Buscar" class="search-icon">
         </button>
-        <!-- Es la seccion de busqueda que esta oculta en movil pero descubiera en Desktop-->
-         <div class="hidden-container-mobile" id="searchContainer">
+
+        <!-- Barra de búsqueda visible en desktop -->
+        <div class="hidden-container-mobile" id="searchContainer">
             <form class="search-bar" role="search">
                 <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" />
                 <button type="submit" class="search-btn">
@@ -52,49 +47,39 @@
     </header>
 
     <main>
-        <nav id = "subcategorias"> <!-- Este es un menu de navegacion por subcategorias-->
-            <h1>Alimentos</h1> 
-            <!-- Esta barre es lo que hace que pueda ser scrolleable-->
-            <div class = "productos-scroll"> 
-            <!-- Por ahora es article, pero cuando quieran que sea interactiva cambiarla a <a> tag-->
+        <!-- Sección de subcategorías -->
+        <nav id="subcategorias">
+            <h1>Alimentos</h1>
+            <div class="productos-scroll">
                 <a class="card" href="#">
                     <img src="/resources/images/LaCompita.png" class="card-img-top" alt="Subcategoria 1">
-                    <div class="card-body">
-                        <h2 class="card-title">Salsas</h2>
-                    </div>
+                    <div class="card-body"><h2 class="card-title">Salsas</h2></div>
                 </a>
 
                 <a class="card" href="#">
                     <img src="/resources/images/CacaoGarapinado.png" class="card-img-top" alt="Subcategoria 2">
-                    <div class="card-body">
-                        <h2 class="card-title">Dulces</h2>
-                    </div>
+                    <div class="card-body"><h2 class="card-title">Dulces</h2></div>
                 </a>
 
                 <a class="card" href="#">
                     <img src="/resources/images/MielAbellamia.png" class="card-img-top" alt="Subcategoria 3">
-                    <div class="card-body">
-                        <h2 class="card-title">Endulzantes</h2>
-                    </div>
+                    <div class="card-body"><h2 class="card-title">Endulzantes</h2></div>
                 </a>
 
                 <a class="card" href="#">
                     <img src="/resources/images/SazonadorDelPatron.png" class="card-img-top" alt="Subcategoria 4">
-                    <div class="card-body">
-                        <h2 class="card-title">Sazonadores</h2>
-                    </div>
+                    <div class="card-body"><h2 class="card-title">Sazonadores</h2></div>
                 </a>
 
                 <a class="card" href="#">
                     <img src="/resources/images/LicorDelHuerto.png" class="card-img-top" alt="Subcategoria 5">
-                    <div class="card-body">
-                        <h2 class="card-title">Bebidas</h2>
-                    </div>
+                    <div class="card-body"><h2 class="card-title">Bebidas</h2></div>
                 </a>
             </div>
         </nav>
 
-        <section id="todos-los-productos"> <!--- Aqui se ubican todos los productos de la seccion correspondiente. --->
+        <!-- 🔹 SECCIÓN DE PRODUCTOS con clase .productos -->
+        <section id="todos-los-productos" class="productos">
             <h1>Todos los productos</h1>
             <div class="galery-display">
                 <a class="card" href="chilitoPikin.html">
@@ -239,28 +224,14 @@
 
     <footer>
         <div class="social-icons">
-            <a href="https://www.facebook.com/gobiernonuevoleon/">
-                <img src="resources/icons/logo de facebook.svg" alt="Facebook" class="social-icon">
-            </a>
-            <a href="https://www.instagram.com/nuevoleonmx/">
-                <img src="resources/icons/instagramlogo.svg" alt="Instagram" class="social-icon instagram-icon">
-            </a>
-            <a href="https://x.com/nuevoleon">
-                <img src="resources/icons/twitterlogo.svg" alt="Twitter" class="social-icon twitter-icon" fill="currentColor">
-            </a>
-            <a href="https://t.me/gobnl">
-                <img src="resources/icons/telegramlogo.svg" alt="Telegram" class="social-icon telegram-icon">
-            </a>
-            <a href="https://www.tiktok.com/@nuevonlmx">
-                <img src="resources/icons/tiktoklogo.svg" alt="TikTok" class="social-icon tiktok-icon">
-            </a>
-            <a href="https://www.youtube.com/user/GobiernoNuevoLeon">
-                <img src="resources/icons/youtubelogo.svg" alt="YouTube" class="social-icon">
-            </a>
+            <a href="https://www.facebook.com/gobiernonuevoleon/"><img src="resources/icons/logo de facebook.svg" alt="Facebook" class="social-icon"></a>
+            <a href="https://www.instagram.com/nuevoleonmx/"><img src="resources/icons/instagramlogo.svg" alt="Instagram" class="social-icon instagram-icon"></a>
+            <a href="https://x.com/nuevoleon"><img src="resources/icons/twitterlogo.svg" alt="Twitter" class="social-icon twitter-icon"></a>
+            <a href="https://t.me/gobnl"><img src="resources/icons/telegramlogo.svg" alt="Telegram" class="social-icon telegram-icon"></a>
+            <a href="https://www.tiktok.com/@nuevonlmx"><img src="resources/icons/tiktoklogo.svg" alt="TikTok" class="social-icon tiktok-icon"></a>
+            <a href="https://www.youtube.com/user/GobiernoNuevoLeon"><img src="resources/icons/youtubelogo.svg" alt="YouTube" class="social-icon"></a>
         </div>
-        <p class="copyright">
-            © 2024 Hecho en Nuevo León. Todos los derechos reservados.
-        </p>
+        <p class="copyright">© 2024 Hecho en Nuevo León. Todos los derechos reservados.</p>
     </footer>
 
 </body>

@@ -246,6 +246,8 @@ input[type="search"]:focus {
   background-color: #fff;
 }
 
+
+
 .galery-display{
     display: flex;
     flex-wrap: wrap; /* Con wrap automaticamente se acomoda con la pantalla*/
@@ -351,4 +353,28 @@ input[type="search"]:focus {
     justify-content: space-around;
     flex-wrap: wrap;
   }
+}
+
+
+section.productos .card {
+  height: 380px !important;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+section.productos .card-img-top {
+  width: 80%;
+  height: 200px !important; 
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 1rem auto;
+  background-color: #fff;
+}
+
+section.productos .card-title,
+section.productos .card-text,
+section.productos .price {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
 }
