@@ -336,7 +336,7 @@ input[type="search"]:focus {
 
   .card {
     flex: 1 0 15vw; /* Cambia que el tamaño minimo ahora sea de 15% del tamaño de pantalla*/
-    min-height: 22rem;
+    min-height: 24rem;
     justify-content: space-around;
     align-items: center;
     }
